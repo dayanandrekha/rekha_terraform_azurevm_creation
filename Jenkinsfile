@@ -11,12 +11,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Source Code') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/<your-org>/terraform-azure-vm.git'
-            }
-        }
 
         stage('Terraform Init') {
             steps {
