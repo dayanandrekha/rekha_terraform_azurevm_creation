@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg" {
   name     = "rg-jenkins-vm"
-  location = "East US"
+  location = "centralindia"
 }
 
 resource "azurerm_virtual_network" "vnet" {
@@ -33,7 +33,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   name                = "jenkinsvm"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  size                = "Standard_D2s_v3"
+  size                = "Standard_B1ms"
   admin_username      = "azureuser"
 
   network_interface_ids = [
