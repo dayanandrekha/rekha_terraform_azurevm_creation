@@ -29,6 +29,7 @@ resource "azurerm_network_interface" "nic" {
   }
 }
 
+
 resource "azurerm_linux_virtual_machine" "vm" {
   name                = "jenkinsvm"
   location            = azurerm_resource_group.rg.location
